@@ -1,0 +1,609 @@
+:root {
+    --primary-color: #1a4b8c;
+    --primary-dark: #0f3261;
+    --primary-light: #2a6ccc;
+    --secondary-color: #d4af37;
+    --accent-color: #c25b3c;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+    --light-gray: #e9ecef;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding-top: 76px;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color) !important;
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.navbar.navbar-scrolled {
+    padding: 0.5rem 0;
+    background-color: var(--primary-dark) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.brand-name {
+    color: white;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: white !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, rgba(26, 75, 140, 0.9) 0%, rgba(15, 50, 97, 0.9) 100%), 
+                url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 0 4rem;
+    color: white;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb {
+    justify-content: center;
+    background: transparent;
+    margin-bottom: 0;
+}
+
+.breadcrumb-item a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Products Section */
+.products-section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.category-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.category-btn {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover, .category-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.product-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    background: white;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 75, 140, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.overlay-btn {
+    color: white;
+    border: 2px solid white;
+    background: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.overlay-btn:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.product-specs {
+    margin-bottom: 1.5rem;
+}
+
+.product-specs li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.product-specs .bi-check-circle-fill {
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+}
+
+.product-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: all 0.4s ease;
+    flex: 1;
+}
+
+.btn-primary:hover {
+    background-color: #bf9b30;
+    border-color: #bf9b30;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.4s ease;
+    flex: 1;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Modal Styles */
+.product-modal .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+}
+
+.product-modal .modal-header {
+    background: var(--primary-color);
+    color: white;
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 1.5rem;
+}
+
+.product-modal .modal-title {
+    font-weight: 700;
+}
+
+.product-modal .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+.product-modal .modal-body {
+    padding: 2rem;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+}
+.product-modal .modal-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.product-modal .modal-specs {
+    margin-bottom: 1.5rem;
+}
+
+.product-modal .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.product-modal .spec-item {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product-modal .spec-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.product-modal .applications-list {
+    columns: 1;
+    margin-top: 1rem;
+}
+
+.product-modal .applications-list li {
+    margin-bottom: 0.5rem;
+}
+
+.product-modal .modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 1.5rem;
+}
+
+/* Estilos para a seção de qualidade no modal */
+.qualidade-section {
+    margin-top: 1.5rem;
+}
+
+.qualidade-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.qualidade-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.qualidade-list .bi-award-fill {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+/* Technical Section */
+.technical-section {
+    background: var(--light-gray);
+    padding: 5rem 0;
+}
+
+.specs-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.table th {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+}
+
+.table td {
+    padding: 1rem;
+    border-color: #eee;
+}
+
+.table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    padding: 5rem 0;
+    color: white;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer h3, .footer h5 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.footer a:hover {
+    color: var(--secondary-color);
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all var(--transition-speed);
+}
+
+.social-icons a:hover {
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    transform: translateY(-3px);
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    z-index: 1000;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Responsivo - Imagem em cima, conteúdo embaixo (igual mobile) */
+@media (min-width: 769px) {
+    .product-modal .modal-dialog {
+        max-width: 600px;
+    }
+    
+    .product-modal .modal-body .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product-modal .col-md-6 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    
+    .product-modal .modal-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Para telas maiores, aumentamos um pouco o modal */
+@media (min-width: 992px) {
+    .product-modal .modal-dialog {
+        max-width: 700px;
+    }
+}
+
+/* Garantir que em mobile continue funcionando */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .category-filter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .product-modal .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-modal .applications-list {
+        columns: 1;
+    }
+    
+    .product-modal .modal-body .row {
+        flex-direction: column;
+    }
+    
+    .product-modal .col-md-6 {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .qualidade-list li {
+        align-items: flex-start;
+    }
+    
+    .qualidade-list .bi-award-fill {
+        margin-top: 0.3rem;
+    }
+}

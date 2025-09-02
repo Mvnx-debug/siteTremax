@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Produtos - Tremax Fios de Cobre e Alumínio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/product.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img class="rounded-circle logo me-2" src="assets/img/icons/logo.png" alt="Tremax">
+                <span class="brand-name">TREMAX</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door me-1"></i> <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#sobre">
+                            <i class="bi bi-building me-1"></i> <span>Sobre</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="produtos.html">
+                            <i class="bi bi-box-seam me-1"></i> <span>Produtos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#qualidade">
+                            <i class="bi bi-award me-1"></i> <span>Qualidade</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contato">
+                            <i class="bi bi-telephone me-1"></i> <span>Contato</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light rounded-pill px-3" href="index.html#contato">
+                            <i class="bi bi-chat-dots me-1"></i> Fale Conosco
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Nossos Produtos</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Produtos</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Linha Completa</h2>
+                <p class="section-subtitle">Conheça nossa linha completa de condutores elétricos de alta qualidade</p>
+            </div>
+
+            <div class="category-filter">
+                <button class="category-btn active" data-filter="all">Todos os Produtos</button>
+                <button class="category-btn" data-filter="cobre">Fios de Cobre</button>
+                <button class="category-btn" data-filter="aluminio">Fios de Alumínio</button>
+                <button class="category-btn" data-filter="cabos">Cabos Especiais</button>
+            </div>
+
+            <div class="row">
+                <!-- Fio de Cobre Esmaltado -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="cobre">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://media.istockphoto.com/id/96792927/pt/foto/envernizados-fio-de-cobre.jpg?s=1024x1024&w=is&k=20&c=4C_iQ5dePRIAG8g40DhTIf7-s5nsICWeeoDRoHnJvTo=" 
+                                 alt="Fio de Cobre Esmaltado" class="product-img">
+                            <span class="product-badge">Mais Vendido</span>
+                            <div class="product-overlay">
+                                <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product="cobre-esmaltado">Detalhes</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Fio de Cobre Esmaltado</h3>
+                            <ul class="list-unstyled product-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Alta condutividade elétrica</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Isolação esmaltada de qualidade</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Diversos calibres disponíveis</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Resistência térmica superior</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                                <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#productModal" data-product="cobre-esmaltado">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fio de Alumínio -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="aluminio">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://media.istockphoto.com/id/1270947935/pt/foto/cable-manufacturing-machine-in-steel-industry.jpg?s=1024x1024&w=is&k=20&c=FAOSFbn23AyVRTkA6ZMSnAlpT4RsmZ3z8TKpv2B97f4=" 
+                                 alt="Fio de Alumínio" class="product-img">
+                            <div class="product-overlay">
+                                <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product="aluminio">Detalhes</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Fio de Alumínio</h3>
+                            <ul class="list-unstyled product-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Excelente custo-benefício</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Leve and resistente</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ideal para transmissão</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Alta durabilidade</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                                <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#productModal" data-product="aluminio">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cabos Especiais -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="cabos">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1678119895596-411628b1f6be?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Cabos Especiais" class="product-img">
+                            <span class="product-badge">Sob Encomenda</span>
+                            <div class="product-overlay">
+                                <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product="cabos-especiais">Detalhes</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Cabos Especiais</h3>
+                            <ul class="list-unstyled product-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Desenvolvimento personalizado</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Para aplicações específicas</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Resistência a intempéries</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Alta flexibilidade</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                                <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#productModal" data-product="cabos-especiais">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fio de Cobre Nu -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="cobre">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="assets/img/products/FioDeCobreNu.jpg" 
+                                 alt="Fio de Cobre Nu" class="product-img">
+                            <div class="product-overlay">
+                                <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product="cobre-nu">Detalhes</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Fio de Cobre Nu</h3>
+                            <ul class="list-unstyled product-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Condutividade máxima</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Sem revestimento</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Aplicações industriales</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Alta pureza (99,9%)</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                                <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#productModal" data-product="cobre-nu">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cabo Multipolar -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="cabos">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Cabo Multipolar" class="product-img">
+                            <div class="product-overlay">
+                                <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product="multipolar">Detalhes</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Cabo Multipolar</h3>
+                            <ul class="list-unstyled product-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Múltiplos condutores</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Isolação PVC</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Alta flexibilidade</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Instalação facilitada</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                                <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#productModal" data-product="multipolar">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fio de Alumínio Revestido -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="aluminio">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1601876816093-6052297033ef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Fio de Alumínio Revestido" class="product-img">
+                            <div class="product-overlay">
+                                <button class="overlay-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product="aluminio-revestido">Detalhes</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Fio de Alumínio Revestido</h3>
+                            <ul class="list-unstyled product-specs">
+                                <li><i class="bi bi-check-circle-fill"></i> Revestimento protetor</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Resistência à corrosão</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Aplicações externas</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Longa vida útil</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                                <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#productModal" data-product="aluminio-revestido">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="modal fade product-modal" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="productModalLabel">Detalhes do Produto</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modalProductImg" src="" alt="Produto" class="modal-img">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductTitle" class="mb-3"></h3>
+                            <p id="modalProductDesc" class="text-muted"></p>
+                            
+                            <h5 class="mt-4 mb-3">Características Principais</h5>
+                            <ul id="modalProductFeatures" class="modal-specs"></ul>
+                            
+                            <div class="specs-grid">
+                                <div class="spec-item">
+                                    <span>Bitola</span>
+                                    <span id="modalProductGauge" class="spec-value"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Temperatura Máx.</span>
+                                    <span id="modalProductTemp" class="spec-value"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Resistência</span>
+                                    <span id="modalProductResistance" class="spec-value"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Material</span>
+                                    <span id="modalProductMaterial" class="spec-value"></span>
+                                </div>
+                            </div>
+                            
+                            <h5 class="mt-4 mb-3">Aplicações</h5>
+                            <ul id="modalProductApplications" class="applications-list"></ul>
+                            
+                            <!-- Seção de Qualidade (será mostrada apenas se houver dados) -->
+                            <div class="qualidade-section">
+                                <h5 class="mt-4 mb-3">Qualidade</h5>
+                                <ul id="modalProductQualidade" class="qualidade-list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="index.html#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Section -->
+    <section class="technical-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Especificações Técnicas</h2>
+                <p class="section-subtitle">Conheça as especificações técnicas dos nossos principais produtos</p>
+            </div>
+
+            <div class="table-responsive specs-table">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Bitola (mm²)</th>
+                            <th>Material</th>
+                            <th>Temperatura Máx.</th>
+                            <th>Resistência Elétrica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fio de Cobre Esmaltado</td>
+                            <td>0.20 - 4.00</td>
+                            <td>Cobre Eletrolítico</td>
+                            <td>180°C</td>
+                            <td>0.01724 Ω/mm²/m</td>
+                        </tr>
+                        <tr>
+                            <td>Fio de Alumínio</td>
+                            <td>1.50 - 35.00</td>
+                            <td>Alumínio 1350</td>
+                            <td>90°C</td>
+                            <td>0.02826 Ω/mm²/m</td>
+                        </tr>
+                        <tr>
+                            <td>Cabos Especiais</td>
+                            <td>Sob Consulta</td>
+                            <td>Personalizado</td>
+                            <td>Varía conforme aplicação</td>
+                            <td>Varía conforme aplicação</td>
+                        </tr>
+                        <tr>
+                            <td>Fio de Cobre Nu</td>
+                            <td>0.50 - 50.00</td>
+                            <td>Cobre Eletrolítico</td>
+                            <td>90°C</td>
+                            <td>0.01724 Ω/mm²/m</td>
+                        </tr>
+                        <tr>
+                            <td>Cabo Multipolar</td>
+                            <td>1.50 - 240.00</td>
+                            <td>Cobre Eletrolítico</td>
+                            <td>70°C</td>
+                            <td>0.01724 Ω/mm²/m</td>
+                        </tr>
+                        <tr>
+                            <td>Fio de Alumínio Revestido</td>
+                            <td>2.50 - 50.00</td>
+                            <td>Alumínio 1350</td>
+                            <td>90°C</td>
+                            <td>0.02826 Ω/mm²/m</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Precisa de um produto personalizado?</h2>
+            <p class="cta-text">Nossa equipe técnica está pronta para desenvolver soluções específicas para suas necessidades. Entre em contato e solicite um orçamento.</p>
+            <a href="index.html#contato" class="btn btn-light btn-lg">Fale com Nossos Especialistas</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3>Tremax</h3>
+                    <p>Especializada na fabricação de fios de cobre e alumínio para aplicações industriais e construção civil.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="index.html#sobre">Sobre</a></li>
+                        <li class="mb-2"><a href="produtos.html">Produtos</a></li>
+                        <li class="mb-2"><a href="index.html#qualidade">Qualidade</a></li>
+                        <li class="mb-2"><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Produtos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="produtos.html">Fios de Cobre</a></li>
+                        <li class="mb-2"><a href="produtos.html">Fios de Alumínio</a></li>
+                        <li class="mb-2"><a href="produtos.html">Cabos Especiais</a></li>
+                        <li class="mb-2"><a href="produtos.html">Soluções Personalizadas</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Rua Industrial, 1234</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> (11) 1234-5678</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contato@tremax.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Tremax. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#">Política de Privacidade</a> | 
+                        <a href="#">Termos de Uso</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts Personalizados -->
+    <script src="assets/scripts/product.js"></script>
+</body>
+</html>
